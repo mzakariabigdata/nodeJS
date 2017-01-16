@@ -5,6 +5,12 @@ var dataFile = require('./data/data.json');
 
 app.set('port', process.env.PORT || 3000 );
 app.set('appData', dataFile);
+app.set('view engine', 'ejs');
+app.set('views', 'app/views');
+
+//globals variables
+app.locals.siteTitle = 'Roux Meetups';
+app.locals.allSpeakers = dataFile.speakers;
 
 app.use(express.static('app/public'));
 app.use(require('./routes/index'));
