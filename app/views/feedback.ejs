@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include partials/templete/head.ejs %>  
+  </head>
+  <body id="<%= pageID %>">
+
+  <% include partials/templete/header.ejs %>
+
+      <div class="container">
+      <div class="row">
+
+        <div class="col-md-5 col-md-offset-4">
+        <h1 class="appelle-form-title"></h1>
+          <form class="appelle-form">
+
+            <div class="form-group">
+                <label for="appelle-form-num">Téléphone du client</label>
+                <input type="text" class="form-control" id="appelle-form-num" placeholder="Entrez le numéro de téléphone du client" required>
+            </div>
+
+            <button type="submit" class="btn btn-default pull-right">Appelle</button>
+            
+          </form>
+        </div><!-- primary -->
+
+        <div class="col-md-5 col-md-offset-4">
+          <form class="feedback-form">
+            <h1 class="feedback-form-title">Ajouter nouveau client</h1>
+            <div class="form-group">
+                <label for="feedback-form-nom">Nom</label>
+                <input type="text" class="form-control" id="feedback-form-nom" placeholder="Entrez votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-form-prenom">Prénom</label>
+                <input type="text" class="form-control" id="feedback-form-prenom" placeholder="Entrez votre prénom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-form-mail">Mail</label>
+                <input type="text" class="form-control" id="feedback-form-mail" placeholder="Entrez votre Mail" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-form-telephone">Télephone</label>
+                <input type="text" class="form-control" id="feedback-form-telephone" placeholder="Entrez votre télephone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-form-typeDemande">Type de demande</label>
+                <select class="selectpicker" id="feedback-form-typeDemande">
+                  <option>Achat</option>
+                  <option>Devis</option>
+                  <option>Après-Vente</option>
+                  <option>Réclamation</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="feedback-form-demande">Demande</label>
+                <textarea type="text" placeholder="Entrez votre demande, puis appuyez sur la soumettre"  class="form-control" id="feedback-form-demande" rows="6"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-default pull-right">Submit</button>
+          </form>
+        </div><!-- primary -->
+        <div class="col-md-5 col-md-offset-4">
+          <div class="maincontent feedback" id="info_client">
+              <h2 class="article-tittelephonele">Les informations du client</h2>
+              <div class="feedback-messages"></div>
+          </div>
+        </div><!-- secondary -->
+      </div>
+    </div><!-- container -->
+  <% include partials/templete/jsdefault.ejs %>
+          
+  </body>
+</html>

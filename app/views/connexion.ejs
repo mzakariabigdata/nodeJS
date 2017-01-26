@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <% include partials/templete/head.ejs %>  
+  </head>
+  <body id="<%= pageID %>">
+
+  <% include partials/templete/header.ejs %>
+
+      <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+        <h1 class="connexion-form-title"></h1>
+          <form class="connexion-form">
+
+            <div class="form-group">
+                <label for="connexion-form-login">Login</label>
+                <input type="text" class="form-control" id="connexion-form-login" placeholder="Entrez votre login" required>
+            </div>
+
+            <div class="form-group">
+                <label for="connexion-form-motPass">Mot de pass</label>
+                <input type="text" class="form-control" id="connexion-form-motPass" placeholder="Entrez votre mot de pass" required>
+            </div>
+
+            <button type="submit" class="btn btn-default pull-right">Ajouter</button>
+            
+          </form>
+
+          <button type="submit" id="valider"  class="btn btn-default pull-right">Valider</button>
+          
+        </div><!-- primary -->
+        <aside class="col-sm-8">
+          <div class="maincontent connexion" id="info_connexion">
+              <h2 class="article-tittelephonele">Recent Connexion</h2>
+              <div class="connexion-messages"></div>
+          </div>
+        </aside><!-- secondary -->
+      </div>
+      <div class="alert alert-warning col-md-4 col-md-offset-4" id="error_login">
+          <strong>Warning!</strong> incorrect login ou mot de pass
+        </div>
+    </div><!-- container -->
+  <% include partials/templete/jsdefault.ejs %>
+
+  </body>
+</html>
