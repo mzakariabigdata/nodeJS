@@ -34,10 +34,10 @@ $(function () {
 		login = $('#connexion-form-login').val();
 		motPass = $('#connexion-form-motPass').val();
 		$.each(connexionData, function(key, item){
-			if (item.login == login && item.pass == motPass) {
+			if (item.login == login && item.motPass == motPass) {
 				console.log('est valide')
 				location.href='/feedback';
-			}else if(item.login != login || item.pass != motPass ){
+			}else if(item.login != login || item.motPass != motPass ){
 				$('#error_login').show();
 			}
 		});
